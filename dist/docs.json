@@ -1,0 +1,196 @@
+{
+  "api": {
+    "name": "SerialPortPlugin",
+    "slug": "serialportplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "OpenPort",
+        "signature": "(options: IOpenPortOptions, callback: SerialPortReadCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "IOpenPortOptions"
+          },
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "SerialPortReadCallback"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "IOpenPortOptions",
+          "SerialPortReadCallback",
+          "CallbackID"
+        ],
+        "slug": "openport"
+      },
+      {
+        "name": "ClosePort",
+        "signature": "(options: IClosePortOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "IClosePortOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "IClosePortOptions"
+        ],
+        "slug": "closeport"
+      },
+      {
+        "name": "GetSerialPorts",
+        "signature": "(options: IGetSerialPortsOptions) => Promise<{ ports: string[]; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "IGetSerialPortsOptions"
+          }
+        ],
+        "returns": "Promise<{ ports: string[]; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "IGetSerialPortsOptions"
+        ],
+        "slug": "getserialports"
+      },
+      {
+        "name": "WriteToSerial",
+        "signature": "(options: IWriteToSerialOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "IWriteToSerialOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "IWriteToSerialOptions"
+        ],
+        "slug": "writetoserial"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "IOpenPortOptions",
+      "slug": "iopenportoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "port",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "baudRate",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "IClosePortOptions",
+      "slug": "icloseportoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "port",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "IGetSerialPortsOptions",
+      "slug": "igetserialportsoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "getPaths",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "IWriteToSerialOptions",
+      "slug": "iwritetoserialoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "port",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "SerialPortReadCallback",
+      "slug": "serialportreadcallback",
+      "docs": "",
+      "types": [
+        {
+          "text": "(data: { data: string; }, err?: any): void",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "CallbackID",
+      "slug": "callbackid",
+      "docs": "",
+      "types": [
+        {
+          "text": "string",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
