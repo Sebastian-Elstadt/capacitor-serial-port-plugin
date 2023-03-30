@@ -16,17 +16,18 @@ public class SerialReadThread extends Thread{
     public void run(){
         super.run();
 
-        while(!this.isInterrupted()){
-            try{
+        while (!this.isInterrupted()) {
+            try {
                 if(inputStream == null) return;
 
                 byte[] buffer = new byte[1024];
                 int size = inputStream.read(buffer);
-                if(size > 0){
+                if (size > 0) {
                     readCallback.OnRead(new String(buffer, StandardCharsets.UTF_8));
                 }
             }
-            catch (Throwable e){
+            catch (Throwable e) {
+                readCallback.Error(e.getMessage());
                 e.printStackTrace();
             }
         }

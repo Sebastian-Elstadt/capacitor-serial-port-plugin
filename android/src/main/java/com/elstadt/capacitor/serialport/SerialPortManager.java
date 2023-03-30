@@ -18,15 +18,7 @@ public class SerialPortManager {
                 this.ClosePort(port);
             }
 
-            SerialPort serialPort = new SerialPort(new File(port), baudRate, 0);
-            ActiveSerialPort activePort = new ActiveSerialPort(
-                    serialPort,
-                    new SerialReadThread(serialPort.getInputStream(), readCallback)
-            );
-
-            activePort.readThread.setName("serialReadThread-" + port);
-            activePort.readThread.run();
-
+            ActiveSerialPort activePort = new ActiveSerialPort(port, baudRate, readCallback);
             activePorts.put(port, activePort);
         }
         catch (Throwable e)
@@ -36,7 +28,7 @@ public class SerialPortManager {
     }
 
     public void ClosePort(String port) throws IOException {
-        ActiveSerialPort removedSerialPort =  activePorts.remove(port);
+        ActiveSerialPort removedSerialPort = activePorts.remove(port);
         removedSerialPort.readThread.interrupt();
         removedSerialPort.serialPort.close();
     }
