@@ -22,5 +22,5 @@ export interface SerialPortPlugin {
     GetSerialPorts(options: IGetSerialPortsOptions): Promise<{
         ports: string[];
     }>;
-    WriteToSerial(options: IWriteToSerialOptions): Promise<void>;
+    WriteToPort(options: IWriteToSerialOptions): Promise<void>;
 }

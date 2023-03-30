@@ -16,7 +16,7 @@ npx cap sync
 * [`OpenPort(...)`](#openport)
 * [`ClosePort(...)`](#closeport)
 * [`GetSerialPorts(...)`](#getserialports)
-* [`WriteToSerial(...)`](#writetoserial)
+* [`WriteToPort(...)`](#writetoport)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -69,10 +69,10 @@ GetSerialPorts(options: IGetSerialPortsOptions) => Promise<{ ports: string[]; }>
 --------------------
 
 
-### WriteToSerial(...)
+### WriteToPort(...)
 
 ```typescript
-WriteToSerial(options: IWriteToSerialOptions) => Promise<void>
+WriteToPort(options: IWriteToSerialOptions) => Promise<void>
 ```
 
 | Param         | Type                                                                    |

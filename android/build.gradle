@@ -46,7 +46,7 @@ android {
 
     externalNativeBuild {
         ndkBuild {
-            path 'src/main/java/com/elstadt/capacitor/serialport/jni/Android.mk'
+            path 'src/main/jni/Android.mk'
         }
     }
 }

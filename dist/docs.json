@@ -67,7 +67,7 @@
         "slug": "getserialports"
       },
       {
-        "name": "WriteToSerial",
+        "name": "WriteToPort",
         "signature": "(options: IWriteToSerialOptions) => Promise<void>",
         "parameters": [
           {
@@ -82,7 +82,7 @@
         "complexTypes": [
           "IWriteToSerialOptions"
         ],
-        "slug": "writetoserial"
+        "slug": "writetoport"
       }
     ],
     "properties": []

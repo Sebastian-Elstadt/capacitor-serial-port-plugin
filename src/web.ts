@@ -19,7 +19,7 @@ export class SerialPortWeb extends WebPlugin implements SerialPortPlugin {
   }
 
   // @ts-ignore
-  async WriteToSerial(options: IWriteToSerialOptions): Promise<void> {
+  async WriteToPort(options: IWriteToSerialOptions): Promise<void> {
     throw 'serial port plugin is not supported for web';
   }
 }

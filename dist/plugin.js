@@ -19,7 +19,7 @@ var CapacitorSerialPort = (function (exports, core) {
             throw 'serial port plugin is not supported for web';
         }
         // @ts-ignore
-        async WriteToSerial(options) {
+        async WriteToPort(options) {
             throw 'serial port plugin is not supported for web';
         }
     }

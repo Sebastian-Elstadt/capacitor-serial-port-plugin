@@ -14,7 +14,7 @@
  * limitations under the License. 
  */
 
-package com.elstadt.capacitor.serialport.android_serialport_api;
+package android_serialport_api;
 
 import android.util.Log;
 

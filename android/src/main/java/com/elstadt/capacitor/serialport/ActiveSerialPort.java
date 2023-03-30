@@ -1,6 +1,6 @@
 package com.elstadt.capacitor.serialport;
 
-import com.elstadt.capacitor.serialport.android_serialport_api.SerialPort;
+import android_serialport_api.SerialPort;
 
 public class ActiveSerialPort {
     public SerialPort serialPort;

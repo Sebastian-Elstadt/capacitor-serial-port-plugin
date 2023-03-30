@@ -4,5 +4,5 @@ export declare class SerialPortWeb extends WebPlugin implements SerialPortPlugin
     OpenPort(options: IOpenPortOptions, callback: SerialPortReadCallback): Promise<CallbackID>;
     ClosePort(options: IClosePortOptions): Promise<void>;
     GetSerialPorts(options: IGetSerialPortsOptions): Promise<void>;
-    WriteToSerial(options: IWriteToSerialOptions): Promise<void>;
+    WriteToPort(options: IWriteToSerialOptions): Promise<void>;
 }

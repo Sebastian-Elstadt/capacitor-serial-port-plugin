@@ -1,7 +1,7 @@
 package com.elstadt.capacitor.serialport;
 
-import com.elstadt.capacitor.serialport.android_serialport_api.SerialPort;
-import com.elstadt.capacitor.serialport.android_serialport_api.SerialPortFinder;
+import android_serialport_api.SerialPort;
+import android_serialport_api.SerialPortFinder;
 
 import java.io.File;
 import java.io.IOException;
